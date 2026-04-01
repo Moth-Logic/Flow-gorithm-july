@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="julia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-30 07:15:23 PM"/>
+        <attribute name="created" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTMwOzA2OjU3OjQ3IFBNOzIzMzg="/>
+        <attribute name="edited" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTMwOzA3OjE1OjIzIFBNOzE7MjQzNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Real" array="False" size=""/>
+            <output expression="&quot;Es o no es triangulo?&quot; &amp;tochar(13)&amp; &quot;Introduzca 3 numeros reales positivos.&quot;" newline="True"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="(a&gt;0) and (b&gt;0) and (c&gt;0)">
+                <then>
+                    <if expression="(a+b&gt;c) and (a+c&gt;b) and (b+c&gt;a)">
+                        <then>
+                            <if expression="(a=b) and (b=c)">
+                                <then>
+                                    <output expression="&quot;Se puede formar un triangulo equilatero&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="(a=b) or (a=c) or (b=c)">
+                                        <then>
+                                            <output expression="&quot;Se puede formar un triangulo isoceles&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Se puede formar un triangulo Escaleno&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;No se puede formar un triangulo.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Los 3 n&#250;meros deben ser positivos y reales&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

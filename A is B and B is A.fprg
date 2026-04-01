@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="A is B and B is A"/>
+        <attribute name="authors" value="Moth"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-14 04:14:14 AM"/>
+        <attribute name="created" value="TW90aDtNT1RILURFU0tUT1A7MjAyNi0wMy0xNDswMzoxMzoxMiBBTTsyNTYw"/>
+        <attribute name="edited" value="TW90aDtNT1RILURFU0tUT1A7MjAyNi0wMy0xNDswNDoxNDoxNCBBTTsxOzI2NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <assign variable="a" expression="a+b"/>
+            <assign variable="b" expression="a-b"/>
+            <assign variable="a" expression="a-b"/>
+            <output expression="a" newline="True"/>
+            <output expression="b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

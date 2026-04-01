@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="julia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-31 03:14:39 PM"/>
+        <attribute name="created" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTMxOzAyOjUyOjEzIFBNOzIzMjM="/>
+        <attribute name="edited" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTMxOzAzOjE0OjM5IFBNOzE7MjQzOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, res" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="res" expression="1"/>
+            <if expression="n&gt;=0">
+                <then>
+                    <while expression="i&lt;=n">
+                        <assign variable="res" expression="res*i"/>
+                        <assign variable="i" expression="i+1"/>
+                    </while>
+                    <output expression="res" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;err&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

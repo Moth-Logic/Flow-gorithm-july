@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="30 mins print"/>
+        <attribute name="authors" value="Moth"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-31 05:24:11 PM"/>
+        <attribute name="created" value="TW90aDtNT1RILURFU0tUT1A7MjAyNi0wMy0zMTsxMDo0ODozNCBQTTsyNTg0"/>
+        <attribute name="edited" value="TW90aDtNT1RILURFU0tUT1A7MjAyNi0wMy0zMTswNToyNDoxMSBQTTsxOzI2ODU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="h, m" type="Integer" array="False" size=""/>
+            <assign variable="h" expression="0"/>
+            <while expression="h&lt;24">
+                <assign variable="m" expression="0"/>
+                <while expression="m&lt;60">
+                    <output expression="&quot;&quot;&amp;h&amp;&quot;:&quot;&amp;m&amp;&quot;&quot;" newline="True"/>
+                    <assign variable="m" expression="m+30"/>
+                </while>
+                <assign variable="h" expression="h+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

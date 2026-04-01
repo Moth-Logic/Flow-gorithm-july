@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="julia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-16 03:36:40 PM"/>
+        <attribute name="created" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTE2OzAzOjE0OjA1IFBNOzIzMjY="/>
+        <attribute name="edited" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTE2OzAzOjM2OjQwIFBNOzE7MjQzNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Entradas: Temperatura en F que sea mayor o igual a -659,67. (Lol 67). Debe ser parte de los numeros reales.&#13;&#10;&#13;&#10;Salidas: Temperatura en C. Salida debe pertenecer a los numeros reales.&#13;&#10;&#13;&#10;Restricciones: Numero en R, mayor o igual que -659,67.&#13;&#10;&#13;&#10;Jos&#233; Juli&#225;n Sol&#243;rzano Hern&#225;ndez&#13;&#10;&#13;&#10;Profe tampoco creo que alguien se vaya a robar mi c&#243;digo &lt;3"/>
+            <declare name="C, F" type="Real" array="False" size=""/>
+            <output expression="&quot;Yo twin! Vamos a convertir Fahrenheit en Celsius!! Porfavor dime cual es la Temperatura en F, recuerda que debe ser mayor o igual a -459.67.&quot;" newline="True"/>
+            <input variable="F"/>
+            <if expression="-459.67&lt;=F">
+                <then>
+                    <assign variable="C" expression="(F-32)*(5/9)"/>
+                    <output expression="&quot;&quot;&amp;F&amp;&quot; Grados Farenheit son &quot;&amp;C&amp;&quot;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;What did I just say? Necesito un numero mayor o igual que -459.67&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

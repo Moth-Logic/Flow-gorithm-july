@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="j.solorzano.2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-06 04:08:03 p.&#8239;m."/>
+        <attribute name="created" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTA2OzAzOjQ3OjU0IHAu4oCvbS47MTE2OTU="/>
+        <attribute name="edited" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTA2OzA0OjA4OjAzIHAu4oCvbS47MzsxMTc5Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculates the area of a triangle.&#13;&#10;&#13;&#10;Input Restrictions: &#13;&#10;&#13;&#10;Base: R+&#13;&#10;Height: R+&#13;&#10;&#13;&#10;Output: &#13;&#10;&#13;&#10;Area must be real"/>
+            <declare name="Base, Height, Area" type="Real" array="False" size=""/>
+            <output expression="&quot;Please input value for base :3&quot;" newline="True"/>
+            <input variable="Base"/>
+            <if expression="Base&gt;0">
+                <then>
+                    <output expression="&quot;Please input value for Height :3&quot;" newline="True"/>
+                    <input variable="Height"/>
+                    <if expression="Height&gt;0">
+                        <then>
+                            <assign variable="Area" expression="(Base*Height)/2"/>
+                            <output expression="&quot;Your triangle has an area of &quot;&amp;Area&amp;&quot;. Love you!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Oops!! The value must be higher than 0!!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Oops!! The value must be higher than 0!!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="j.solorzano.2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-06 04:18:01 p.&#8239;m."/>
+        <attribute name="created" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTA2OzAzOjM4OjQ4IHAu4oCvbS47MTE2OTg="/>
+        <attribute name="edited" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTA2OzA0OjE4OjAxIHAu4oCvbS47MjsxMTc5NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculate Perimeter of a triangle. Height and Base are necessary.&#13;&#10;&#13;&#10;Height= R+&#13;&#10;Base= R+&#13;&#10;&#13;&#10;Meaning:&#13;&#10;Hipotenuse=R+&#13;&#10;&#13;&#10;Sum all the values&#13;&#10;&#13;&#10;"/>
+            <declare name="H, B, Hip, Per" type="Real" array="False" size=""/>
+            <output expression="&quot;Input Height Please UwU&quot;" newline="True"/>
+            <input variable="H"/>
+            <if expression="H&gt;0">
+                <then>
+                    <output expression="&quot;Pwease input the Base of the triangle! OwO&quot;" newline="True"/>
+                    <input variable="B"/>
+                    <if expression="H&gt;0">
+                        <then>
+                            <assign variable="Hip" expression="sqrt(H^2+B^2)"/>
+                            <assign variable="Per" expression="H+B+Hip"/>
+                            <output expression="&quot;The perimeter of  a triangle with base &quot;&amp;B&amp;&quot; and Height &quot;&amp;H&amp;&quot; is &quot;&amp;Per&amp;&quot;. Thank you!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Please give a number greater than 0!  &gt;////&lt;&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Pwease give a number greater than 0!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

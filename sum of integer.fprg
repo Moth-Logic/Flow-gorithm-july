@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="julia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-30 08:35:49 PM"/>
+        <attribute name="created" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTMwOzA4OjAyOjQxIFBNOzIzMjQ="/>
+        <attribute name="edited" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTMwOzA4OjM1OjQ5IFBNOzE7MjQ0Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="sum, num" type="Real" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <output expression="&quot;Cuantos numeros vas a sumar hoy?&quot;" newline="True"/>
+            <input variable="n"/>
+            <while expression="i&lt;=n">
+                <output expression="&quot;Introduzca un numero para sumar&quot;" newline="True"/>
+                <input variable="num"/>
+                <assign variable="sum" expression="sum+num"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="julia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-16 06:07:09 PM"/>
+        <attribute name="created" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTE2OzAzOjM4OjU0IFBNOzIzMzY="/>
+        <attribute name="edited" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTE2OzA2OjA3OjA5IFBNOzU7MjQ0Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Fil, Col, Num, Deb, Pri, Ult" type="Integer" array="False" size=""/>
+            <comment text="0 1 2 3 4 5&#13;&#10;6 7 8 9 10 11&#13;&#10;12 13 14 15 16 17&#13;&#10;18 19 20 21 22 23"/>
+            <comment text="Entradas: Un numero de fila entre 0 y 3. Un numero de columna entre 0 y 5.&#13;&#10;&#13;&#10;Salidas: El n&#250;mero que se encuentra en la fila y columna indicada&#13;&#10;2. El n&#250;mero que se encuentra debajo&#13;&#10;3. El n&#250;mero que se encuentra de primero en la fila&#13;&#10;4. El n&#250;mero que se encuentra de &#250;ltimo en la fila&#13;&#10;&#13;&#10;Todos estos valores est&#225;n restringidos a estar dentro del Intervalo [0,23]&#13;&#10;&#13;&#10;Restricciones: En el caso de las filas, el valor es un Entero entre 0 y 3, ya que solo existen 4 filas (Fila 0, Fila 1, Fila 2 y Fila 3). En el caso de las columnas, el valor debe ser igual, un entero entre 0 y 5 (Columna 0, Columna 1, ... , Columna 5).&#13;&#10;&#13;&#10;Jos&#233; Juli&#225;n Sol&#243;rzano Hern&#225;ndez"/>
+            <output expression="&quot;Introduzca el N&#250;mero de Fila. Debe ser un n&#250;mero entre 0 y 3&quot;" newline="True"/>
+            <input variable="Fil"/>
+            <if expression="0&lt;=Fil and Fil&lt;=3">
+                <then>
+                    <output expression="&quot;Introduzca el N&#250;mero de Columna. Debe ser un n&#250;mero entre 0 y 5.&quot;" newline="True"/>
+                    <input variable="Col"/>
+                    <if expression="0&lt;=Col and Col&lt;=5">
+                        <then>
+                            <assign variable="Num" expression="Fil*6+Col"/>
+                            <assign variable="Deb" expression="(Fil+1)*6+Col"/>
+                            <assign variable="Pri" expression="Fil*6"/>
+                            <assign variable="Ult" expression="Fil*6+5"/>
+                            <output expression="&quot;Fila &quot;&amp;Fil&amp;&quot; y Columna &quot;&amp;Col&amp;&quot;&quot;" newline="True"/>
+                            <output expression="&quot;El N&#250;mero es &quot;&amp;Num&amp;&quot;&quot;" newline="True"/>
+                            <output expression="&quot;El n&#250;mero debajo es: &quot;&amp;Deb&amp;&quot;&quot;" newline="True"/>
+                            <output expression="&quot;El Primer N&#250;mero de la Fila &quot;&amp;Fil&amp;&quot; es &quot;&amp;Pri&amp;&quot; y el &#250;ltimo es &quot;&amp;Ult&amp;&quot;&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Error: N&#250;mero de Columna debe estar entre 0 y 5&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Error: N&#250;mero de Fila debe estar entre 0 y 3&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="j.solorzano.2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-20 03:45:06 p.&#8239;m."/>
+        <attribute name="created" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTE4OzAyOjAyOjA0IHAu4oCvbS47MTE2ODM="/>
+        <attribute name="edited" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTIwOzAzOjQ1OjA2IHAu4oCvbS47MTk7MTE4NTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <output expression="&quot;Numero entero mayor que 0&quot;" newline="True"/>
+            <input variable="a"/>
+            <if expression="a&gt;0">
+                <then>
+                    <if expression="a==1">
+                        <then>
+                            <output expression="1" newline="True"/>
+                        </then>
+                        <else>
+                            <while expression="a!=1">
+                                <if expression="a%2==0">
+                                    <then>
+                                        <assign variable="a" expression="a/2"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="a" expression="3*a+1"/>
+                                    </else>
+                                </if>
+                                <output expression="a" newline="True"/>
+                            </while>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;ERROR: Numero debe ser mayor que 0&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="julia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-30 09:29:40 PM"/>
+        <attribute name="created" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTMwOzA4OjQyOjUzIFBNOzIzMzE="/>
+        <attribute name="edited" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTMwOzA5OjI5OjQwIFBNOzE7MjQ0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="num, max" type="Real" array="False" size=""/>
+            <output expression="&quot;enter amount of numbers&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;Enter a numero broski&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="max" expression="num"/>
+            <comment text="trust me bro i=2"/>
+            <assign variable="i" expression="2"/>
+            <while expression="i&lt;=n">
+                <output expression="&quot;enter a num&quot;" newline="True"/>
+                <input variable="num"/>
+                <if expression="num&gt;max">
+                    <then>
+                        <assign variable="max" expression="num"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="max" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

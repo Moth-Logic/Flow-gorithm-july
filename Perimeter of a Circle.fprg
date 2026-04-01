@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="j.solorzano.2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-06 04:26:29 p.&#8239;m."/>
+        <attribute name="created" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTA2OzA0OjE4OjMwIHAu4oCvbS47MTE2ODg="/>
+        <attribute name="edited" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTA2OzA0OjI2OjI5IHAu4oCvbS47MjsxMTgwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Perimeter of a circle using its Radius.&#13;&#10;&#13;&#10;Radius must be part of R+&#13;&#10;Henceforth, Perimeter is part of R+"/>
+            <declare name="R, P" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter the Radius of your circle&quot;" newline="True"/>
+            <input variable="R"/>
+            <if expression="R&gt;0">
+                <then>
+                    <assign variable="P" expression="2*R*pi"/>
+                    <output expression="&quot;The perimeter of your &quot;&amp;R&amp;&quot; radius circle is &quot;&amp;P&amp;&quot;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Please make sure the radius is bigger than 0!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

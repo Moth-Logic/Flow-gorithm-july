@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="julia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-31 02:51:39 PM"/>
+        <attribute name="created" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTMxOzAxOjIyOjI3IFBNOzIzMjQ="/>
+        <attribute name="edited" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTMxOzAyOjUxOjM5IFBNOzE7MjQzOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, d, res" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <input variable="d"/>
+            <assign variable="res" expression="elimina(n,d)"/>
+            <output expression="res" newline="True"/>
+        </body>
+    </function>
+    <function name="elimina" type="Integer" variable="res">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="d" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="res, fac, dig" type="Integer" array="False" size=""/>
+            <assign variable="res" expression="0"/>
+            <assign variable="fac" expression="1"/>
+            <while expression="n&gt;0">
+                <assign variable="dig" expression="n%10"/>
+                <assign variable="n" expression="n/10"/>
+                <if expression="dig!=d">
+                    <then>
+                        <assign variable="res" expression="res+dig*fac"/>
+                        <assign variable="fac" expression="fac*10"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

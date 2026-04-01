@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="julia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-16 03:38:49 PM"/>
+        <attribute name="created" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTE2OzA5OjU2OjIyIEFNOzIzMjI="/>
+        <attribute name="edited" value="anVsaWE7SlVMWS1QQzsyMDI2LTAzLTE2OzAzOjM4OjQ5IFBNOzI7MjQ0OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Entradas: (X1,Y1) y (X2, Y2), los 2 coordenadas para obtener la pendiente.&#13;&#10;&#13;&#10;Restricciones: Cualquier valor que no pertenezca  a R (Como N&#250;mero i o el conjunto de los complejos C). El valor de X1 debe ser diferente que el valor de X2.&#13;&#10;&#13;&#10;Salidas: La pendiente de la funci&#243;n con respecto a los 2 puntos de entrada&#13;&#10;&#13;&#10;Autor: Jos&#233; Juli&#225;n Sol&#243;rzano Hern&#225;ndez"/>
+            <declare name="X1, X2, Y1, Y2, Pen" type="Real" array="False" size=""/>
+            <output expression="&quot;Hola! Soy tu asistente de pendientes! Dejame ayudarte a calcular la pendiente de tu funci&#243;n!&quot;" newline="True"/>
+            <output expression="&quot;Introduce el valor de X1:&quot;" newline="True"/>
+            <input variable="X1"/>
+            <output expression="&quot;Introduce valor de Y1&quot;" newline="True"/>
+            <input variable="Y1"/>
+            <output expression="&quot;Introduce valor de X2:&quot;" newline="True"/>
+            <input variable="X2"/>
+            <if expression="X1!=X2">
+                <then>
+                    <output expression="&quot;Introduce valor de Y2:&quot;" newline="True"/>
+                    <input variable="Y2"/>
+                    <assign variable="Pen" expression="(Y2 - Y1)/(X2 - X1)"/>
+                    <output expression="&quot;La pendiente de tu funci&#243;n es: &quot;&amp;Pen&amp;&quot;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Oops! Valor de X2 debe ser diferente que X1!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
