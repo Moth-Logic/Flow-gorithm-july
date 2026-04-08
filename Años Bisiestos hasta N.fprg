@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="j.solorzano.2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-20 04:49:20 p.&#8239;m."/>
+        <attribute name="created" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTIwOzA0OjM0OjQwIHAu4oCvbS47MTE2ODM="/>
+        <attribute name="edited" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTIwOzA0OjQyOjM5IHAu4oCvbS47MTtqLnNvbG9yemFuby4yO1NKMDEtMzAzLTk2NDU5OzIwMjYtMDMtMjA7MDM6NTE6NDIgcC7igK9tLjtCaXNpZXN0w61zaW1vR3JlZ29yaW8uZnByZzsyNjMwNg=="/>
+        <attribute name="edited" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTIwOzA0OjQ5OjIwIHAu4oCvbS47MTsxMTc5NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="(Y%4==0) and ((Y%100!=0) or (Y%100==0 and Y%400==0))&#13;&#10;&#13;&#10;Programa que imprime todos los a&#241;os bisiestos hasta un a&#241;o limite.&#13;&#10;&#13;&#10;Entradas restricciones: &#13;&#10;A&#241;o L&#237;mite, Entero mayor o igual a 1582.&#13;&#10;&#13;&#10;Salidas: Listado de a&#241;os bisiestos"/>
+            <declare name="AL, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduzca el a&#241;o l&#237;mite:&quot;" newline="True"/>
+            <input variable="AL"/>
+            <if expression="AL&gt;=1582">
+                <then>
+                    <for variable="i" start="1582" end="AL" direction="inc" step="1">
+                        <if expression="Bisi(i)">
+                            <then>
+                                <output expression="i" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                </then>
+                <else>
+                    <output expression="&quot;Ese no sirve lol xd&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Bisi" type="Boolean" variable="Result">
+        <parameters>
+            <parameter name="VueltasalSol" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Result" type="Boolean" array="False" size=""/>
+            <assign variable="Result" expression="(VueltasalSol%4==0) and ((VueltasalSol%100!=0) or (VueltasalSol%100==0 and VueltasalSol%400==0))"/>
+        </body>
+    </function>
+</flowgorithm>

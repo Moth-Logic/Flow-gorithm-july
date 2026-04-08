@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="j.solorzano.2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-20 04:30:24 p.&#8239;m."/>
+        <attribute name="created" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTIwOzAzOjUxOjQyIHAu4oCvbS47MTE2ODM="/>
+        <attribute name="edited" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTIwOzA0OjMwOjI0IHAu4oCvbS47MTsxMTc4OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Entradas: A&#241;o mayor a 1582&#13;&#10;Salidas: Decir si es bisiesto o no&#13;&#10;&#13;&#10;Restricciones: Debe ser un a&#241;o mayor o igual a 1582&#13;&#10;&#13;&#10;Jos&#233; Juli&#225;n Sol&#243;rzano Hern&#225;ndez"/>
+            <declare name="Y" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduzca un a&#241;o, debe ser un a&#241;o mayor a 1582.&quot;" newline="True"/>
+            <input variable="Y"/>
+            <if expression="y&gt;=1582">
+                <then>
+                    <if expression="esBisiesto(Y)">
+                        <then>
+                            <output expression="&quot;&quot;&amp;Y&amp;&quot; es un a&#241;o bisiesto&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;&quot;&amp;Y&amp;&quot; no es un a&#241;o bisiesto.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;ERROR: Debe ser un a&#241;o mayor a 1582&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="esBisiesto" type="Boolean" variable="Result">
+        <parameters>
+            <parameter name="VueltasalSol" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Result" type="Boolean" array="False" size=""/>
+            <assign variable="Result" expression="(VueltasalSol%4==0) and ((VueltasalSol%100!=0) or (VueltasalSol%100==0 and VueltasalSol%400==0))"/>
+        </body>
+    </function>
+</flowgorithm>

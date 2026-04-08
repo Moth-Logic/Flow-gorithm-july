@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="j.solorzano.2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-18 04:55:35 p.&#8239;m."/>
+        <attribute name="created" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTE4OzA0OjM2OjU0IHAu4oCvbS47MTE2OTc="/>
+        <attribute name="edited" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTE4OzA0OjU1OjM1IHAu4oCvbS47MTsxMTgwNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Un algoritmo que reciba como entrada tres n&#250;meros enteros y que los imprima en orden desde el&#13;&#10;menor hasta el mayor.&#13;&#10;&#13;&#10;Entradas: 3 Numeros Reales&#13;&#10;Restricciones: R&#13;&#10;&#13;&#10;Salidas: Los 3 Numeros Ordenados"/>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduzca el primer n&#250;mero.&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Introduzca el segundo n&#250;mero.&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Introduzca el Tercer N&#250;mero.&quot;" newline="True"/>
+            <input variable="c"/>
+            <if expression="a&gt;b">
+                <then>
+                    <if expression="c&gt;a and c&gt;b">
+                        <then>
+                            <output expression="b" newline="True"/>
+                            <output expression="a" newline="True"/>
+                            <output expression="c" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="c&gt;b">
+                                <then>
+                                    <output expression="b" newline="True"/>
+                                    <output expression="c" newline="True"/>
+                                    <output expression="a" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="c" newline="True"/>
+                                    <output expression="b" newline="True"/>
+                                    <output expression="a" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="c&gt;a and c&gt;b">
+                        <then>
+                            <output expression="a" newline="True"/>
+                            <output expression="b" newline="True"/>
+                            <output expression="c" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="c&gt;a">
+                                <then>
+                                    <output expression="a" newline="True"/>
+                                    <output expression="c" newline="True"/>
+                                    <output expression="b" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="c" newline="True"/>
+                                    <output expression="a" newline="True"/>
+                                    <output expression="b" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

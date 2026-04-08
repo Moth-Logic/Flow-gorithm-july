@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="j.solorzano.2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-18 04:27:51 p.&#8239;m."/>
+        <attribute name="created" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTE4OzAzOjIwOjIxIHAu4oCvbS47MTE2ODM="/>
+        <attribute name="edited" value="ai5zb2xvcnphbm8uMjtTSjAxLTMwMy05NjQ1OTsyMDI2LTAzLTE4OzA0OjI3OjUxIHAu4oCvbS47MTsxMTgwMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Un algoritmo que reciba la hora actual del d&#237;a en tres entradas: horas (con valores de 0 a 23), minutos (con valores de 0 a 59) y segundos (con valores de 0 a 59) y determina cu&#225;ntas horas, minutos y segundos restan para culminar el d&#237;a.&#13;&#10;&#13;&#10;Entradas: horas (con valores de 0 a 23), minutos&#13;&#10;(con valores de 0 a 59) y segundos (con valores de 0 a 59)&#13;&#10;&#13;&#10;Salidas: Cu&#225;ntas horas, minutos y segundos&#13;&#10;restan para culminar el d&#237;a.&#13;&#10;&#13;&#10;Juli&#225;n Sol&#243;rzano Hern&#225;ndez Flores&#13;&#10;"/>
+            <declare name="H, M, HI, MI, SI" type="Real" array="False" size=""/>
+            <declare name="S" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduzca una Hora. Debe ser un valor entre 0 y 23&quot;" newline="True"/>
+            <input variable="HI"/>
+            <if expression="0&lt;=HI and HI&lt;=23">
+                <then>
+                    <output expression="&quot;Indique los minutos. Debe ser un valor entre 0 y 59&quot;" newline="True"/>
+                    <input variable="MI"/>
+                    <if expression="0&lt;=MI and MI&lt;=59">
+                        <then>
+                            <output expression="&quot;Indique los segundos. Debe ser un valor entre 0 y 59.&quot;" newline="True"/>
+                            <input variable="SI"/>
+                            <if expression="0&lt;=SI and SI&lt;=59">
+                                <then>
+                                    <assign variable="H" expression="24-(HI+(MI/60)+(SI/3600))"/>
+                                    <assign variable="M" expression="1440 - ( (60*HI) + MI + (SI/60) )"/>
+                                    <assign variable="S" expression="86400 - ( (3600*HI) + (60*MI) + SI )"/>
+                                    <output expression="&quot;La Hora actual son las &quot;&amp;HI&amp;&quot;:&quot;&amp;MI&amp;&quot;:&quot;&amp;SI&amp;&quot;&quot;" newline="True"/>
+                                    <output expression="&quot;Las Horas que faltan son &quot;&amp;H&amp;&quot;&quot;" newline="True"/>
+                                    <output expression="&quot;Los Minutos que faltan son &quot;&amp;M&amp;&quot;&quot;" newline="True"/>
+                                    <output expression="&quot;Los Segundos que faltan son &quot;&amp;S&amp;&quot;&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Debe ser un valor entre 0 y 59.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Debe ser un valor valido entre 0 y 59.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Debe ser un valor entre 0 y 24.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
