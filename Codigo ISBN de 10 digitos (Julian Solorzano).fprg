@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-10 02:40:57 p.&#8239;m."/>
+        <attribute name="created" value="VXN1YXJpbztTSjAxLTMwMy05NTI3OTsyMDI2LTA0LTEwOzAyOjA5OjMyIHAu4oCvbS47MTExODA="/>
+        <attribute name="edited" value="VXN1YXJpbztTSjAxLTMwMy05NTI3OTsyMDI2LTA0LTEwOzAyOjQwOjU3IHAu4oCvbS47MjsxMTI5MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Entradas: 3 valores, Grupo (Dos digitos), Editorial (4 digitos) y el titulo (3 digitos). &#13;&#10;Salidas: El codigo ISBN con el codigo de control al final.&#13;&#10;Restricciones: Cada valor tiene un rango distinto, el grupo tiene de 10 a 99, la editorial de 1000 a 9999 y el titulo que debe ser de 100 a 999.&#13;&#10;&#13;&#10;Julian Solorzano Hernandez "/>
+            <declare name="Grupo, Editorial, Titulo, Control" type="Integer" array="False" size=""/>
+            <output expression="&quot;Porfavor Introduzca el #  de Grupo del libro:&quot;" newline="True"/>
+            <input variable="Grupo"/>
+            <output expression="&quot;Porfavor Introduzca el # de la Editorial del libro:&quot;" newline="True"/>
+            <input variable="Editorial"/>
+            <output expression="&quot;Porfavor Introduzca el # de T&#237;tulo del libro:&quot;" newline="True"/>
+            <input variable="Titulo"/>
+            <if expression="(10&lt;=Grupo) and (Grupo&lt;=99)">
+                <then>
+                    <if expression="(1000&lt;=Editorial) and (Editorial&lt;=9999)">
+                        <then>
+                            <if expression="(100&lt;=Titulo) and (Titulo&lt;=999)">
+                                <then>
+                                    <assign variable="Control" expression="calcularcontrol(Grupo, Editorial, Titulo)"/>
+                                    <if expression="(Control%11)==10">
+                                        <then>
+                                            <output expression="&quot;El C&#243;digo es ISBN &quot;&amp;Grupo&amp;&quot; &quot;&amp;ToChar(45)&amp;&quot; &quot;&amp;Editorial&amp;&quot; &quot;&amp;ToChar(45)&amp;&quot; &quot;&amp;Titulo&amp;&quot; &quot;&amp;ToChar(45)&amp;&quot; &quot;&amp;ToChar(88)&amp;&quot;&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;El C&#243;digo es ISBN &quot;&amp;Grupo&amp;&quot; &quot;&amp;ToChar(45)&amp;&quot; &quot;&amp;Editorial&amp;&quot; &quot;&amp;ToChar(45)&amp;&quot; &quot;&amp;Titulo&amp;&quot; &quot;&amp;ToChar(45)&amp;&quot; &quot;&amp;Control&amp;&quot;&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;ERROR: T&#237;tulo inv&#225;lido. Debe ser un numero de 3 digitos.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;ERROR: Editorial inv&#225;lida. Debe ser un numero de 4 digitos.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;ERROR: Grupo inv&#225;lido. Debe ser un numero de 2 digitos.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="calcularcontrol" type="Integer" variable="ValueC">
+        <parameters>
+            <parameter name="Grupo" type="Integer" array="False"/>
+            <parameter name="Editorial" type="Integer" array="False"/>
+            <parameter name="Titulo" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="ValueC, g, e, t, i, dig, sum, FullC" type="Integer" array="False" size=""/>
+            <assign variable="g" expression="Grupo*10000000"/>
+            <assign variable="e" expression="Editorial*1000"/>
+            <assign variable="t" expression="Titulo"/>
+            <assign variable="FullC" expression="g+e+t"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="9" end="1" direction="dec" step="1">
+                <assign variable="dig" expression="FullC%10"/>
+                <assign variable="sum" expression="sum+(dig*i)"/>
+                <assign variable="FullC" expression="FullC/10"/>
+            </for>
+            <assign variable="ValueC" expression="sum%11"/>
+        </body>
+    </function>
+</flowgorithm>

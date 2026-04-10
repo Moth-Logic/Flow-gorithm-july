@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-10 02:11:24 p.&#8239;m."/>
+        <attribute name="created" value="VXN1YXJpbztTSjAxLTMwMy05NTI3OTsyMDI2LTA0LTEwOzAxOjAwOjEzIHAu4oCvbS47MTExNjk="/>
+        <attribute name="edited" value="VXN1YXJpbztTSjAxLTMwMy05NTI3OTsyMDI2LTA0LTEwOzAyOjExOjI0IHAu4oCvbS47MjsxMTI4Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Entradas: Entero Positivo (n)&#13;&#10;Restricciones: Entero positivo. &#13;&#10;Salidas: Invocar cubo con la suma de los impares. Imprime el resultado.&#13;&#10;&#13;&#10;Julian Sol&#243;rzano Hern&#225;ndez"/>
+            <declare name="n, res" type="Integer" array="False" size=""/>
+            <output expression="&quot;Indique el numero para elevar al cubo:&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="n!=0">
+                <then>
+                    <if expression="1!=n">
+                        <then>
+                            <assign variable="res" expression="cubo(n)"/>
+                            <output expression="&quot;El cubo de &quot;&amp;n&amp;&quot; es: &quot;&amp;res&amp;&quot;&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="n" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="n" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="cubo" type="Integer" variable="sum">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="ini, sum, acu, i, x" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <assign variable="x" expression="0"/>
+            <assign variable="ini" expression="1"/>
+            <assign variable="sum" expression="1"/>
+            <assign variable="acu" expression="0"/>
+            <while expression="i&lt;=n-1">
+                <assign variable="ini" expression="ini+(2*i)"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="acu" expression="ini"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;n-1">
+                <assign variable="ini" expression="ini+2"/>
+                <assign variable="acu" expression="acu+ini"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="sum" expression="acu"/>
+        </body>
+    </function>
+</flowgorithm>
